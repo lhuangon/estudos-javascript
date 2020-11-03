@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>Escreva em qual país você nasceu.</p>
+    <input type="text" name="textNac" id="textNac">
+    <button type="button" value="Verificar" onclick="verificar()">Verificar</button>
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var nacio = document.getElementById('textNac');
+            var r = document.querySelector('div#res');
+
+            if(nacio.value == 'Brasil'){
+                r.innerHTML = '<p>Você é Brasileiro(a)!</p>'
+            } else {
+                r.innerHTML = '<p>Você é Estrangeiro(a)!</p>'
+            }
+
+            r.innerHTML += '<p>Obrigado por usar esta funcionalidade.</p>'
+
+        }
+    </script>
+</body>
+</html>
